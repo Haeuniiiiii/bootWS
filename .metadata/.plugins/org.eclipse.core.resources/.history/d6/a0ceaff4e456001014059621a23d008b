@@ -1,0 +1,10 @@
+package com.junsu.sohee.controller;
+
+
+@Controll
+public class SoheeController {
+
+	public String getName() {
+		return "소희 만만세";
+	}
+}

@@ -1,0 +1,6 @@
+package com.junsu.sohee.vo;
+
+public class Idol {
+	private String name;
+	private int age;
+}

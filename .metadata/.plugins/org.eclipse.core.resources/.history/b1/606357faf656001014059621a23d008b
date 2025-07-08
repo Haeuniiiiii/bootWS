@@ -1,0 +1,2 @@
+spring.application.name=sohee
+logging.level.com.junsu.sohee=debug

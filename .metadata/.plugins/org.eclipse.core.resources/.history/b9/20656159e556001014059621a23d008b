@@ -1,0 +1,11 @@
+package com.junsu.sohee.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController // @Controller + @ResponseBody
+public class SoheeController {
+
+	public String getName() {
+		return "소희 만만세";
+	}
+}
