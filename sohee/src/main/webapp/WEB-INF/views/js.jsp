@@ -13,11 +13,16 @@
             아이디 <input type="text"  name="sid" value=""><br>
             이름  <input type="text"  name="name" value="" required><br>
             나이  <input type="text"  name="age" value="" required><br>
-            <button type="submit">등록</button>
+            <button type="submit" id="addBtn">등록</button>
+            <button type="submit" id="schBtn">검색</button>
+            <button type="submit" id="modBtn">수정</button>
+            <button type="submit" id="delBtn">삭제</button>
         </form>
     </div>
+    <br />
     <div id="list"></div>
 <script>
+
  const idolForm = document.querySelector("#idolForm");
  idolForm.onsubmit = function(){
     event.preventDefault();    

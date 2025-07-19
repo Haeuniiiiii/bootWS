@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.roze.uk.mapper.BdMapper">
+
+	<select id="bdList" resultType="com.roze.uk.vo.BdVO">
+		select *
+		from tb_bd
+	</select>
+
+
+	<select id="readBd" parameterType="int" resultType="com.roze.uk.vo.BdVO">
+		select *
+		from tb_bd
+		where bd_id = #{bdId}
+	</select>
+	
+	
+	<insert id="insertBd" parameterType="com.roze.uk.vo.BdVO">
+		insert into tb_bd (
+		    bd_id
+		    , bd_cont
+		    , bd_furl
+		    , bd_title
+		) values (
+		    bd_seq.nextval
+		    , #{bdCont}
+		    , #{bdFurl}
+		    , #{bdTitle}
+		)
+	</insert>
+	
+	
+	<update id="updateBd" parameterType="com.roze.uk.vo.BdVO">
+		update tb_bd
+		set
+			bd_cont = #{bdCont}
+		    , bd_furl = #{bdFurl}
+		    , bd_title = #{bdTitle}
+		where bd_id = #{bdId}
+	</update>	
+	
+	
+	<delete id="deleteBd" parameterType="int">
+		delete from tb_bd
+		where bd_id = #{bdId}
+	</delete>
+
+</mapper>

@@ -3,6 +3,7 @@ package com.junsu.sohee.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import com.junsu.sohee.vo.Idol;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 
+@CrossOrigin("*")
 @Slf4j
 @RestController // @Controller + @ResponseBody
 @RequestMapping("/api")
